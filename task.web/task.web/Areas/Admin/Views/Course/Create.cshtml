@@ -1,0 +1,51 @@
+﻿@model CourseCreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Create Course</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" asp-antiforgery="true" asp-action="Create" asp-area="Admin" asp-controller="Course" method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input type="text" class="form-control" asp-for="Title" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label asp-for="Fess"></label>
+                    <input type="text" class="form-control" asp-for="Fess" placeholder="Enter Fees">
+                  </div>                  
+                  <div class="form-group">
+                    <label asp-for="ClassStartDate"></label>
+                    <input type="text" class="form-control" asp-for="ClassStartDate" placeholder="Enter Start Date">
+                  </div>
+      
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+
+
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
